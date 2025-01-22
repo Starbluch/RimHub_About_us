@@ -369,15 +369,7 @@
         });
     });
     $(window).resize(function () {
-    if (window.innerWidth <= 1199) {
-        document.querySelectorAll('.slider-main__next, .slider-main__prev').forEach(el => {
-            el.style.display = 'none';
-        });
-    } else {
-        document.querySelectorAll('.slider-main__next, .slider-main__prev').forEach(el => {
-            el.style.display = 'block';
-        });
-    }
+
 });
 
         $(document).ready(function(){
@@ -392,21 +384,6 @@
                 nextArrow: '<button class="speakers__next"><img src="assets/Icons/icon-8.png" alt="Next"></button>'
             });
         });
-        const phoneInput = document.getElementById('phone');
-
-
-        phoneInput.addEventListener('focus', function () {
-        if (!this.value.startsWith('+38')) {
-            this.value = '+38';
-        }
-        });
-
-        phoneInput.addEventListener('blur', function () {
-        if (this.value === '+38') {
-            this.value = ''; 
-        }
-        });
-        
     </script>
 </body>
 </html>
