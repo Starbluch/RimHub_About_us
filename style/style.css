@@ -476,8 +476,6 @@ p, a {
     height: 220px;
     margin: 20px 0 0 80px;
     overflow: scroll;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
   }
 }
 @media (max-width: 576px) {
