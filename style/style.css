@@ -54,7 +54,7 @@ p, a {
   width: 100%;
   max-width: 1920px;
   padding: 0;
-  height: 3000px;
+  height: auto;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -742,7 +742,7 @@ p, a {
 }
 @media (max-width: 450px) {
   .main__title__item_4 {
-    margin: 0px 0 50px 0px;
+    margin: 50px 0 50px 0px;
   }
   .main__title__item_4 .main__title__h1__item_4 {
     font-size: 26px;
