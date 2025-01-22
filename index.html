@@ -208,10 +208,55 @@
                     </div>
                 </section>
 
+                <div class="main__title__item_4">
+                    <h1 class="main__title__h1__item_4">
+                        Авторизуйся на сайті
+                    </h1>
+                </div>
+
+                <div class="main__title__line__item_4">
+                    <h1 class="main__title__h1__line__item_4">
+                        Авторизуйся на сайті
+                        <hr class="main__title__hr__line__item_4">
+                        <hr class="main__title__hr__line__item_5">
+                    </h1>
+                </div>
+
+                <section class="section__authorization">
+                        <form class="authorization" id="authorizationForm" action="/submit" method="POST">
+
+                            <div class="authorization__form__1">
+                                <input type="text" id="username" name="username" required placeholder="Ім’я">
+                            </div>
+                            
+                            <hr class="authorization_hr">
+
+                            <div class="authorization__form__2">
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone" 
+                                        required placeholder="Телефон"
+                                        pattern="^\+38\d{10}$" 
+                                        required>
+                              </div>
+
+                              <hr class="authorization_hr">
+
+                              <div class="authorization__form__3">
+                                    <input type="email" id="email" name="email" required placeholder="Електронна пошта">
+                              </div>
+
+                              <hr class="authorization_hr">
+
+                            <button class="authorization__button" type="submit">авторизуватись</button>
+
+                          </form>
+                </section>
 
             </main>
 
-            <!-- <footer class="footer">
+            <footer class="footer">
                 <div class="footer-container">
                     <div class="footer__contact">
                         <h1 class="footer__title">
@@ -293,7 +338,7 @@
                         </div>
                     </div>
                 </div>
-            </footer> -->
+            </footer>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -338,7 +383,7 @@
         $(document).ready(function(){
             console.log("Slick is initializing...");
     
-            // Инициализация слайдера
+
             $('.speakers__container').slick({ 
                 centerMode: true,
                 slidesToShow: 1,    
@@ -346,6 +391,20 @@
                 prevArrow: '<button class="speakers__prev"><img src="assets/Icons/icon-9.png" alt="Previous"></button>',
                 nextArrow: '<button class="speakers__next"><img src="assets/Icons/icon-8.png" alt="Next"></button>'
             });
+        });
+        const phoneInput = document.getElementById('phone');
+
+
+        phoneInput.addEventListener('focus', function () {
+        if (!this.value.startsWith('+38')) {
+            this.value = '+38';
+        }
+        });
+
+        phoneInput.addEventListener('blur', function () {
+        if (this.value === '+38') {
+            this.value = ''; 
+        }
         });
         
     </script>
