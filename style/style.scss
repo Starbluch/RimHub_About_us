@@ -69,6 +69,170 @@ p,a {
     overflow: hidden;
 }
 
+.navbarr {
+    position: fixed;
+    width: 100%;
+    max-width: 1920px;
+    background-color: #ffffff;
+    border: none;
+    height: 100px;
+    z-index: 999;
+    .container-fluid {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1200px;
+        background-color: #ffffff;
+
+        .navbar-header {
+            min-height: 70px;
+            .navbar-toggle {
+                margin: 20px 20px 20px 0;
+            }
+            .navbar-brand {
+                padding: 10px;
+                .logo {
+                }
+                @media (max-width:768px) {
+                    .logo {
+                        width: auto;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+        .collapse {
+            height: 100px!important;
+            padding: 25px 0;
+            .nav {
+                font-size: 18px;
+                .dropdown:hover .dropdown-menu {
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 1000; 
+                }
+                .dropdown-menu {
+                    display: none;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    .menu {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-rows: 1fr;
+                        padding: 0 20px;
+                        column-gap: 60px;
+                        font-size: 16px;
+                        li {
+                            margin: 15px 0;
+                            min-width: 180px;
+                        }
+                    }
+                    @media (max-width: 992px) {
+                        .menu {
+                            min-width: 80px;
+                            column-gap: 10px;
+                            font-size: 14px;
+                        }
+                    }
+                    @media (max-width: 768px) {
+                        .menu {
+                            font-size: 14px;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: 1fr 1fr 1fr;
+                        }
+                    }
+                }
+                @media (max-width: 768px) {
+                    .dropdown:hover .dropdown-menu {
+                        display: none;
+                        visibility: hidden;
+                        opacity: 0; 
+                    }
+                    .dropdown-menu {
+                        display: none; 
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+                    .dropdown.open .dropdown-menu {
+                        display: block;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                .soc_container {
+                    margin-left: 35px;
+                    .soc_item {
+                        margin: 3px 10px 0 0;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 44px;
+                        height: 44px;
+                        border-radius: 50%;
+                        background-color: #5C2E03;
+                    }
+                    @media (max-width:992px) {
+                        .soc_item {
+                            margin: 10px 5px 0 0!important;
+                            width: 30px;
+                            height: 30px;
+                            .img {
+                                width: 15px;
+                                height: auto;
+                            }
+                        }
+                    }
+                    @media (max-width:768px) {
+                        .soc_item {
+                            margin: 10px 5px 0 0!important;
+                            width: 44px;
+                            height: 44px;
+                            .img {
+                                width: 20px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+                @media (max-width:768px) {
+                    .soc_container {
+                        margin: 0;
+                    }
+                }
+                
+            }
+            @media (max-width:992px) {
+                .nav {
+                    font-size: 16px;
+                    .nav_item {
+                        text-align: center;
+                    }
+                }
+            }
+            @media (max-width:768px) {
+                .nav {
+                    font-size: 14px;
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+        @media (max-width:768px) {
+            .collapse {
+                height: auto!important;
+            }
+        }
+    }
+}
+@media (max-width:768px) {
+    .navbarr {
+        height: auto;
+    }
+}
+
 .main {
     padding: 20px;
     max-width: 1200px;
@@ -78,7 +242,7 @@ p,a {
     margin: 0 auto;
 }
 .main__navigation {
-    margin: 58px 5px 40px 0px;
+    margin: 140px 5px 40px 0px;
     .img {
         margin: 0 8px;
     }
@@ -122,7 +286,7 @@ p,a {
 .main__title__line {
     position: absolute;
     margin-left: 110px;
-    top: 125px;
+    top: 207px;
     .main__title__h1__line {
         position: relative;
         font-size: 32px;
@@ -382,7 +546,7 @@ p,a {
 
 .main__title__item_2 {
     margin: 150px 0 30px 110px;
-    opacity: 0;
+    opacity: 0.5;
     .main__title__h1__item_2 {
         font-size: 32px;
         font-weight: 700;
@@ -406,7 +570,7 @@ p,a {
 .main__title__line__item_2 {
     position: absolute;
     margin-left: 110px;
-    top: 1470px;
+    top: 1622px;
     .main__title__h1__line__item_2 {
         position: relative;
         font-size: 32px;
@@ -667,7 +831,7 @@ p,a {
 .main__title__line__item_3 {
     position: absolute;
     margin-left: 110px;
-    top: 1924px;
+    top: 2068px;
     .main__title__h1__line__item_3 {
         position: relative;
         font-size: 32px;
@@ -832,7 +996,7 @@ p,a {
 
 .main__title__line__item_4 {
     position: absolute;
-    top: 2244px;
+    top: 2385px;
     .main__title__h1__line__item_4 {
         text-align: center;
         position: relative;
